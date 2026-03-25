@@ -1,12 +1,14 @@
 const button = document.getElementById("urlbutton");
 
+const siteUrl = window.location.origin;
+
 async function sendurl() {
   const url = document.getElementById("url").value;
   const result = document.getElementById("result");
   const copybutton = document.getElementById("copybutton");
 
   try {
-    const send = await fetch("http://localhost:3000/url", {
+    const send = await fetch(siteUrl+"/url", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,19 +22,15 @@ async function sendurl() {
     result.textContent = data.url;
 
     //copy button
-    copybutton.addEventListener("click",async()=>{
-        try{
-            await navigator.clipboard.writeText(data.url);
-            copybutton.textContent = "Copied";
-
-        }
-        catch{
-            
-        }
-        setInterval(()=>{
-            copybutton.textContent = "Copy"
-        },3000)
-    })
+    copybutton.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(data.url);
+        copybutton.textContent = "Copied";
+      } catch {}
+      setInterval(() => {
+        copybutton.textContent = "Copy";
+      }, 3000);
+    });
 
     await navigator.clipboard.writeText(url);
     console.log(data.url);
@@ -46,6 +44,3 @@ async function sendurl() {
 }
 
 button.addEventListener("click", sendurl);
-
-
-

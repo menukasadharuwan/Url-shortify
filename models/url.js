@@ -1,3 +1,13 @@
-//ps = UW4ywkHYMoicL4eq
-//name = menuka2004825_db_user
+const mongoose = require("mongoose");
 
+const urlschema = mongoose.Schema({
+    originalUrl : String,
+    shortCode : String,
+    date:{
+        type: Date,
+        default: Date.now
+    }
+    }
+);
+
+module.exports = mongoose.model("url",urlschema);

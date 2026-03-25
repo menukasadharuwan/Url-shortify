@@ -1,10 +1,10 @@
-// mongodb+srv://menuka2004825_db_user:UW4ywkHYMoicL4eq@cluster0.3jdmn8q.mongodb.net/?appName=Cluster0
+require("dotenv").config()
 
 const mongoose = require("mongoose")
 
 const dbconnect = async() =>{
     try{
-    const db = await mongoose.connect("mongodb+srv://menuka2004825_db_user:UW4ywkHYMoicL4eq@cluster0.3jdmn8q.mongodb.net/?appName=Cluster0");
+    const db = await mongoose.connect(process.env.mongodb_url);
     console.log("Db connect successfull.")
     }
     catch(error){
@@ -12,3 +12,4 @@ const dbconnect = async() =>{
     }
 }
 
+module.exports = dbconnect;

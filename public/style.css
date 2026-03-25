@@ -5,7 +5,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* BODY */
+
 body {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #333;
@@ -16,7 +16,7 @@ body {
   flex-direction: column;
 }
 
-/* HIDE SCROLLBAR (but still scroll if needed) */
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -24,7 +24,7 @@ body {
   scrollbar-width: none;
 }
 
-/* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ body {
   color: #ffd369;
 }
 
-/* HERO */
+
 .hero {
   text-align: center;
   margin-top: 20px;
@@ -72,7 +72,7 @@ body {
   opacity: 0.9;
 }
 
-/* MAIN CONTAINER */
+
 .container {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
@@ -103,7 +103,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* INPUT */
+
 .input-box {
   margin-top: 20px;
 }
@@ -118,7 +118,7 @@ input {
   font-size: 1rem;
 }
 
-/* BUTTON */
+
 button {
   width: 100%;
   padding: 14px;
@@ -135,7 +135,7 @@ button:hover {
   background: #4834d4;
 }
 
-/* RESULT BOX */
+
 .result-box {
   margin-top: 25px;
   text-align: left;
@@ -145,7 +145,7 @@ button:hover {
   margin-bottom: 10px;
 }
 
-/* RESULT LINK */
+
 .result-link {
   display: flex;
   align-items: center;
@@ -164,7 +164,7 @@ button:hover {
   word-break: break-all;
 }
 
-/* COPY BUTTON (SMALL RIGHT SIDE) */
+
 .copy-btn {
   background: #00b894;
   color: white;
@@ -186,7 +186,7 @@ button:hover {
   transform: scale(0.95);
 }
 
-/* FOOTER */
+
 footer {
   text-align: center;
   margin-top: auto;
@@ -195,7 +195,7 @@ footer {
   opacity: 0.8;
 }
 
-/* MOBILE */
+
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 1.8rem;

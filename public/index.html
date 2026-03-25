@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Shortener</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background: #ffffff;
+      padding: 35px 30px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .container h1 {
+      font-size: 30px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .input-box {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-box input:focus {
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+    }
+
+    .input-box button {
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #4f46e5;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .input-box button:hover {
+      background: #4338ca;
+    }
+
+    .result-box {
+      margin-top: 25px;
+      padding: 16px;
+      background: #f3f4f6;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .result-box h3 {
+      font-size: 16px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .result-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 12px;
+      flex-wrap: wrap;
+    }
+
+    .result-link a {
+      color: #4f46e5;
+      text-decoration: none;
+      word-break: break-all;
+      font-size: 15px;
+    }
+
+    .copy-btn {
+      background: #10b981;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .copy-btn:hover {
+      background: #059669;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      .container h1 {
+        font-size: 24px;
+      }
+
+      .result-link {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .copy-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>URL Shortener</h1>
+    <p>Paste your long URL and get a short, shareable link instantly.</p>
+
+    <div class="input-box">
+      <input type="text" placeholder="Enter your long URL here" />
+      <button>Shorten URL</button>
+    </div>
+
+    <div class="result-box">
+      <h3>Shortened URL</h3>
+      <div class="result-link">
+        <a href="#">https://short.ly/abc123</a>
+        <button class="copy-btn">Copy</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

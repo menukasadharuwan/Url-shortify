@@ -21,7 +21,7 @@ dbconnect();
 app.post("/url", async (req, res) => {
     //get data in frontend
     const { original } = req.body;
-
+    console.log(original)
     //validation
     if (!original) {
         return res.status(400).json({
@@ -29,6 +29,7 @@ app.post("/url", async (req, res) => {
         message: "Url not found",
         });
     }
+
 
     //generater shortid
     const shortID = shortid.generate();

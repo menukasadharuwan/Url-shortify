@@ -49,7 +49,7 @@ app.post("/url", async (req, res) => {
   res.json({
     status: true,
     message: "message arrived success!",
-    url: process.env.server_url + shortID,
+    url: "https://urlshortify.up.railway.app" + shortID,
   });
 });
 

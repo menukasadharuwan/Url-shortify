@@ -57,7 +57,7 @@ app.post("/url", async (req, res) => {
   res.json({
     status: true,
     message: "message arrived success!",
-    url: process.env.server_url + shortID,
+    url: "http://35.154.123.204/" + shortID,
   });
 });
 

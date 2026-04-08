@@ -17,11 +17,7 @@ app.use(express.static("public"));
 //db connect
 dbconnect();
 
-app.get("/",(req,res)=>{
-  res.json({
-    message:"Connect successfull."
-  })
-})
+
 
 //get original url and save it database
 app.post("/url", async (req, res) => {
